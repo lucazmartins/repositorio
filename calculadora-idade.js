@@ -10,31 +10,21 @@ function calculaIdade(dia,mes,ano){
 
      
      if(subAno <= 0)
-         return 0;
+         return ("Insira um ano válido");
 
     if (subMes > 0) 
     return subAno     
      
-     if(subMes < 0) {
+    if(subMes < 0) {
          return subAno - 1;
-     }
-     else {
-         if(subMes ==0) {
+    }
+    else {
              if(subDia  >0 ){
-                 return subDia
+                 return subAno
              }
-             else {
-                if(subDia > 0)
-                return subAno
-                 
-             }
-         }
-         else {
-             
-         }
-     }
- }
-
+                        
+    }
+}
 
 
 
