@@ -3,27 +3,35 @@ function calculaIdade(dia,mes,ano){
     const mesCorrente = 11;
     const diaCorrente = 27;
 
-    const subAno = anoCorrente - ano
-    const subMes = mesCorrente - mes
-    const subDia = diaCorrente - dia
+    const subAno = anoCorrente - ano;
+    const subMes = mesCorrente - mes;
+    const subDia = diaCorrente - dia;
 
 
-     
-     if(subAno <= 0)
-         return ("Insira um ano válido");
+// SubAno <0     
+    if (subAno === 0)
+        return 0;
+
+    if (subAno < 0)
+        return "insira um ano válido";
+
+// SubAno > 0
 
     if (subMes > 0) 
-    return subAno     
+        return subAno;     
      
-    if(subMes < 0) {
-         return subAno - 1;
-    }
-    else {
-             if(subDia  >0 ){
-                 return subAno
-             }
-                        
-    }
+    if (subMes < 0) 
+        return subAno - 1;
+    
+// SubAno = 0
+
+    if (subDia  >= 0)
+        return subAno;
+   
+// Obrigatoriamente o subDia < 0  
+
+    return subAno - 1;                 
+    
 }
 
 
